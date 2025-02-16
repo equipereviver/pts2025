@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Terapêutico Singular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .campo {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            display: inline-block;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s;
+        }
+        .campo:hover {
+            background-color: #d3d3d3;
+        }
+        .resultado {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Escolha os campos abaixo do Projeto Terapeutico Singular:</h2>
+
+<h3>Questões Prioritarias:</h3>
+<div class="campo" onclick="adicionarTexto('Dependencia e abuso do alcool')">Dependencia e abuso do alcool</div>
+<div class="campo" onclick="adicionarTexto('Abstinencia manifesta por sinais e sintomas de sindrome de abstinencia alcoolica')">Abstinencia manifesta por sinais e sintomas de sindrome de abstinencia alcoolica</div>
+<div class="campo" onclick="adicionarTexto('Consumo para aliviar ou evitar sintomas de abstinencia')">Consumo para aliviar ou evitar sintomas de abstinencia</div>
+<div class="campo" onclick="adicionarTexto('Cuidados relacionados a SAA que envolvem medicacao e controle de sinais')">Cuidados relacionados a SAA que envolvem medicacao e controle de sinais</div>
+<div class="campo" onclick="adicionarTexto('Desejo de diminuir padrao de consumo de bebida alcoolica')">Desejo de diminuir padrao de consumo de bebida alcoolica</div>
+
+<h3>Uso de SPAS e/ou multiple substancias:</h3>
+<div class="campo" onclick="adicionarTexto('Dependencia e abuso de outras SPAS')">Dependencia e abuso de outras SPAS</div>
+<div class="campo" onclick="adicionarTexto('Uso recorrente da substancia resultando no fracasso em cumprir obrigacoes')">Uso recorrente da substancia resultando no fracasso em cumprir obrigacoes</div>
+<div class="campo" onclick="adicionarTexto('Uso intenso de SPAS agudizando quadro psiquiatrico de base')">Uso intenso de SPAS agudizando quadro psiquiatrico de base</div>
+<div class="campo" onclick="adicionarTexto('Problemas legais recorrentes relacionados a substancia')">Problemas legais recorrentes relacionados a substancia</div>
+<div class="campo" onclick="adicionarTexto('Uso continuado da substancia apesar de problemas sociais ou interpessoais')">Uso continuado da substancia apesar de problemas sociais ou interpessoais</div>
+
+<h3>Objetivos de Curto Prazo:</h3>
+<div class="campo" onclick="adicionarTexto('Construir cuidado pautado nas praticas de reducao de danos')">Construir cuidado pautado nas praticas de reducao de danos</div>
+<div class="campo" onclick="adicionarTexto('Manutencao da proposta de cuidado em reducao de danos')">Manutencao da proposta de cuidado em reducao de danos</div>
+<div class="campo" onclick="adicionarTexto('Construir espacos em que o usuario possa problematizar o consumo de SPAS')">Construir espacos em que o usuario possa problematizar o consumo de SPAS</div>
+<div class="campo" onclick="adicionarTexto('Vinculacao com o servico para a construcao de cuidados pertinentes')">Vinculacao com o servico para a construcao de cuidados pertinentes</div>
+<div class="campo" onclick="adicionarTexto('Acolher usuario, uso e seu sofrimento')">Acolher usuario, uso e seu sofrimento</div>
+
+<h3>Objetivos de Longo Prazo:</h3>
+<div class="campo" onclick="adicionarTexto('Manutencao da abstinencia de alcool a longo prazo')">Manutencao da abstinencia de alcool a longo prazo</div>
+<div class="campo" onclick="adicionarTexto('Melhora da saude fisica relacionada ao uso de alcool')">Melhora da saude fisica relacionada ao uso de alcool</div>
+<div class="campo" onclick="adicionarTexto('Fortalecimento da saude mental no tratamento do abuso de substancias')">Fortalecimento da saude mental no tratamento do abuso de substancias</div>
+<div class="campo" onclick="adicionarTexto('Reintegracao social e profissional ao mercado de trabalho')">Reintegracao social e profissional ao mercado de trabalho</div>
+<div class="campo" onclick="adicionarTexto('Reducao dos riscos associados ao uso de substancias')">Reducao dos riscos associados ao uso de substancias</div>
+
+<div class="resultado" id="resultado">
+    <h3>Campos Escolhidos:</h3>
+    <p id="textoResultado"></p>
+</div>
+
+<script>
+    function adicionarTexto(texto) {
+        // Seleciona o elemento onde o texto será exibido
+        var resultado = document.getElementById('textoResultado');
+        
+        // Cria o texto do resultado com a nova escolha
+        if (resultado.innerHTML === '') {
+            resultado.innerHTML = texto;
+        } else {
+            resultado.innerHTML += ', ' + texto;
+        }
+        
+        // Exibe a área de resultado, se ainda não estiver visível
+        document.getElementById('resultado').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
