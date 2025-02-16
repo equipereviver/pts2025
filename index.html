@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Terap�utico Singular</title>
+    <title>Projeto Terapêutico Singular</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,14 +37,14 @@
 
 <h2>Escolha os campos abaixo do Projeto Terapeutico Singular:</h2>
 
-<h3>Quest�es Prioritarias:</h3>
+<h3>Questões Prioritarias:</h3>
 <div class="campo" onclick="adicionarTexto('Dependencia e abuso do alcool')">Dependencia e abuso do alcool</div>
-<div class="campo" onclick="adicionarTexto('Abstinencia manifesta por sinais e sintomas de sindrome de abstinencia alcoolica')">Abstinencia manifesta por sinais e sintomas de sindrome de abstinencia alcoolica</div>
+<div class="campo" onclick="adicionarTexto('Abstinencia manifestada por sinais e sintomas de sindrome de abstinencia alcoolica')">Abstinencia manifestada por sinais e sintomas de sindrome de abstinencia alcoolica</div>
 <div class="campo" onclick="adicionarTexto('Consumo para aliviar ou evitar sintomas de abstinencia')">Consumo para aliviar ou evitar sintomas de abstinencia</div>
 <div class="campo" onclick="adicionarTexto('Cuidados relacionados a SAA que envolvem medicacao e controle de sinais')">Cuidados relacionados a SAA que envolvem medicacao e controle de sinais</div>
 <div class="campo" onclick="adicionarTexto('Desejo de diminuir padrao de consumo de bebida alcoolica')">Desejo de diminuir padrao de consumo de bebida alcoolica</div>
 
-<h3>Uso de SPAS e/ou multiple substancias:</h3>
+<h3>Uso de SPAS e/ou multiplas substancias:</h3>
 <div class="campo" onclick="adicionarTexto('Dependencia e abuso de outras SPAS')">Dependencia e abuso de outras SPAS</div>
 <div class="campo" onclick="adicionarTexto('Uso recorrente da substancia resultando no fracasso em cumprir obrigacoes')">Uso recorrente da substancia resultando no fracasso em cumprir obrigacoes</div>
 <div class="campo" onclick="adicionarTexto('Uso intenso de SPAS agudizando quadro psiquiatrico de base')">Uso intenso de SPAS agudizando quadro psiquiatrico de base</div>
@@ -57,6 +57,13 @@
 <div class="campo" onclick="adicionarTexto('Construir espacos em que o usuario possa problematizar o consumo de SPAS')">Construir espacos em que o usuario possa problematizar o consumo de SPAS</div>
 <div class="campo" onclick="adicionarTexto('Vinculacao com o servico para a construcao de cuidados pertinentes')">Vinculacao com o servico para a construcao de cuidados pertinentes</div>
 <div class="campo" onclick="adicionarTexto('Acolher usuario, uso e seu sofrimento')">Acolher usuario, uso e seu sofrimento</div>
+
+<h3>Objetivos de Médio Prazo:</h3>
+<div class="campo" onclick="adicionarTexto('Construir práticas de cuidado que façam mediações nos territórios de vida')">Construir práticas de cuidado que façam mediações nos territórios de vida</div>
+<div class="campo" onclick="adicionarTexto('Retomada de vinculos')">Retomada de vinculos</div>
+<div class="campo" onclick="adicionarTexto('Pensar práticas que favoreçam a autnomia, ainda que em pequenas ações')">Pensar práticas que favoreçam a autonomia, ainda que em pequenas ações</div>
+<div class="campo" onclick="adicionarTexto('Práticas de cuidado que envolvam tecnologias leves: acolhimento, vínculo, escuta')">Práticas de cuidado que envolvam tecnologias leves: acolhimento, vinculo, escuta</div>
+<div class="campo" onclick="adicionarTexto('Pensar na retomada de atividades remuneras')">Pensar na retomada de atividades remuneradas</div>
 
 <h3>Objetivos de Longo Prazo:</h3>
 <div class="campo" onclick="adicionarTexto('Manutencao da abstinencia de alcool a longo prazo')">Manutencao da abstinencia de alcool a longo prazo</div>
@@ -72,7 +79,7 @@
 
 <script>
     function adicionarTexto(texto) {
-        // Seleciona o elemento onde o texto ser� exibido
+        // Seleciona o elemento onde o texto será exibido
         var resultado = document.getElementById('textoResultado');
         
         // Cria o texto do resultado com a nova escolha
@@ -82,7 +89,7 @@
             resultado.innerHTML += ', ' + texto;
         }
         
-        // Exibe a �rea de resultado, se ainda n�o estiver vis�vel
+        // Exibe a área de resultado, se ainda não estiver visível
         document.getElementById('resultado').style.display = 'block';
     }
 </script>
