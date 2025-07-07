@@ -1,112 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Terapêutico Singular</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        h2 {
-            text-align: center;
-        }
-        .campo {
-            padding: 10px;
-            margin: 5px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-            display: inline-block;
-            background-color: #f0f0f0;
-            transition: background-color 0.3s;
-        }
-        .campo:hover {
-            background-color: #d3d3d3;
-        }
-        .resultado {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-            display: none;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vital 360 Saúde Domiciliar</title>
+<style>
+  body {font-family: Arial, sans-serif; margin:0; padding:0; color:#333;}
+  header {background:#0a74da; color:#fff; padding: 20px; text-align:center;}
+  nav a {color:#fff; margin: 0 15px; text-decoration:none; font-weight:bold;}
+  nav a:hover {text-decoration: underline;}
+  .banner {background: url('https://images.unsplash.com/photo-1554284126-4a9e7e04438f?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; height: 400px; display:flex; align-items:center; justify-content:center; color:#fff; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);}
+  .banner h1 {font-size: 2.5rem; max-width: 600px; text-align:center;}
+  .banner button {margin-top: 20px; padding: 12px 30px; font-size: 1.1rem; border:none; background:#ff6f61; color:#fff; cursor:pointer; border-radius: 5px;}
+  section {padding: 40px 20px; max-width: 1000px; margin: auto;}
+  h2 {text-align:center; margin-bottom: 30px; color:#0a74da;}
+  .services, .plans, .team {display:flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;}
+  .card {background:#f5f5f5; border-radius: 10px; padding: 20px; width: 280px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+  .card h3 {color:#0a74da; margin-bottom: 15px;}
+  .card p {font-size: 0.9rem;}
+  form {max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 15px;}
+  input, textarea {padding: 10px; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px;}
+  button.submit {background:#0a74da; color:#fff; border:none; padding: 12px; font-size: 1rem; cursor:pointer; border-radius: 5px;}
+  footer {background:#222; color:#aaa; text-align:center; padding: 15px 10px; font-size: 0.9rem;}
+</style>
 </head>
 <body>
 
-<h2>Elenque os campos abaixo do Projeto Terapeutico Singular:</h2>
+<header>
+  <h1>Vital 360 Saúde Domiciliar</h1>
+  <nav>
+    <a href="#services">Serviços</a>
+    <a href="#plans">Planos</a>
+    <a href="#team">Equipe</a>
+    <a href="#contact">Contato</a>
+  </nav>
+</header>
 
-<h3>Questoes prioritarias uso abusivo de álcool:</h3>
-<div class="campo" onclick="adicionarTexto('Dependencia e abuso do alcool')">Dependencia e abuso do alcool</div>
-<div class="campo" onclick="adicionarTexto('Abstinencia manifestada por sinais e sintomas de sindrome de abstinencia alcoolica')">Abstinencia manifestada por sinais e sintomas de sindrome de abstinencia alcoolica</div>
-<div class="campo" onclick="adicionarTexto('Consumo para aliviar ou evitar sintomas de abstinencia')">Consumo para aliviar ou evitar sintomas de abstinencia</div>
-<div class="campo" onclick="adicionarTexto('Cuidados relacionados a SAA que envolvem medicacao e controle de sinais')">Cuidados relacionados a SAA que envolvem medicacao e controle de sinais</div>
-<div class="campo" onclick="adicionarTexto('Desejo de diminuir padrao de consumo de bebida alcoolica')">Desejo de diminuir padrao de consumo de bebida alcoolica</div>
-<div class="campo" onclick="adicionarTexto('Necessidade de abstinência de bebida alcoólica por questões clínicas')">Necessidade de abstinência de bebida alcoólica por questões clínicas</div>                                                                                                                                                                    
-                                                                                                                                                                                                                                                                                                                                        
-<h3>Questoes prioritarias uso abusivo de multiplas:</h3>
-<div class="campo" onclick="adicionarTexto('Baixa adesão/vinculação ao Caps')">Baixa adesão/vinculação ao Caps</div>
-<div class="campo" onclick="adicionarTexto('Dependencia e abuso de múltiplas SPAS')">Dependencia e abuso de múltiplas SPAS</div>
-<div class="campo" onclick="adicionarTexto('Situações de vulnerabilidade quando em uso intenso de SPAS')">Situações de vulnerabilidade quando em uso intenso de SPAS</div>
-<div class="campo" onclick="adicionarTexto('Abandono de atividades sociais e ocupacionais em virtude do uso de SPAS')">Abandono de atividades sociais e ocupacionais em virtude do uso de SPAS</div>
-<div class="campo" onclick="adicionarTexto('Vulnerabilidade social')">Vulnerabilidade social</div>
-<div class="campo" onclick="adicionarTexto('Exposiçao a violencias')">Exposiçao a violencias</div>
-<div class="campo" onclick="adicionarTexto('Riscos e exposicoes no territorio')">Vulnerabilidade social</div>  
-<div class="campo" onclick="adicionarTexto('Uso recorrente da substancia resultando no fracasso em cumprir obrigacoes')">Uso recorrente da substancia resultando no fracasso em cumprir obrigacoes</div>
-<div class="campo" onclick="adicionarTexto('Uso intenso de SPAS agudizando quadro psiquiatrico de base')">Uso intenso de SPAS agudizando quadro psiquiatrico de base</div>
-<div class="campo" onclick="adicionarTexto('Problemas legais recorrentes relacionados a substancia')">Problemas legais recorrentes relacionados a substancia</div>
-<div class="campo" onclick="adicionarTexto('Uso continuado da substancia apesar de problemas sociais ou interpessoais')">Uso continuado da substancia apesar de problemas sociais ou interpessoais</div>
-
-<h3>Questoes prioritarias (vinculos e relacoes):</h3>
-<div class="campo" onclick="adicionarTexto('Vinculo familiar fragilizado')">Vinculo familiar fragilizado</div>
-<div class="campo" onclick="adicionarTexto('Crise na dinamica familiar')">Crise na dinamica familiar</div>
-<div class="campo" onclick="adicionarTexto('Sobrecarga envolvendo o cuidado familiar')">Sobrecarga envolvendo o cuidado familiar</div>
-<div class="campo" onclick="adicionarTexto('Questoes envolvendo a solidao e/ou solitude')">Questoes envolvendo a solidao e/ou solitude</div>
-<div class="campo" onclick="adicionarTexto('Dificuldade em manter relaçoes interpessoais e vinculos fragilizados')">Dificuldade em manter relacoes interpessoais e vinculos fragilizados</div>
-
-<h3>Objetivos de Curto Prazo:</h3>
-<div class="campo" onclick="adicionarTexto('Construir cuidado pautado nas praticas de reducao de danos')">Construir cuidado pautado nas praticas de reducao de danos</div>
-<div class="campo" onclick="adicionarTexto('Manutencao da proposta de cuidado em reducao de danos')">Manutencao da proposta de cuidado em reducao de danos</div>
-<div class="campo" onclick="adicionarTexto('Construir espacos em que o usuario possa problematizar o consumo de SPAS')">Construir espacos em que o usuario possa problematizar o consumo de SPAS</div>
-<div class="campo" onclick="adicionarTexto('Vinculacao com o servico para a construcao de cuidados pertinentes')">Vinculacao com o servico para a construcao de cuidados pertinentes</div>
-<div class="campo" onclick="adicionarTexto('Acolher usuario, uso e seu sofrimento')">Acolher usuario, uso e seu sofrimento</div>
-
-<h3>Objetivos de Médio Prazo:</h3>
-<div class="campo" onclick="adicionarTexto('Construir práticas de cuidado que façam mediações nos territórios de vida')">Construir práticas de cuidado que façam mediações nos territórios de vida</div>
-<div class="campo" onclick="adicionarTexto('Retomada de vinculos')">Retomada de vinculos</div>
-<div class="campo" onclick="adicionarTexto('Pensar práticas que favoreçam a autnomia, ainda que em pequenas ações')">Pensar práticas que favoreçam a autonomia, ainda que em pequenas ações</div>
-<div class="campo" onclick="adicionarTexto('Práticas de cuidado que envolvam tecnologias leves: acolhimento, vínculo, escuta')">Práticas de cuidado que envolvam tecnologias leves: acolhimento, vinculo, escuta</div>
-<div class="campo" onclick="adicionarTexto('Pensar na retomada de atividades remuneras')">Pensar na retomada de atividades remuneradas</div>
-
-<h3>Objetivos de Longo Prazo:</h3>
-<div class="campo" onclick="adicionarTexto('Manutencao da abstinencia de alcool a longo prazo')">Manutencao da abstinencia de alcool a longo prazo</div>
-<div class="campo" onclick="adicionarTexto('Melhora da saude fisica relacionada ao uso de alcool')">Melhora da saude fisica relacionada ao uso de alcool</div>
-<div class="campo" onclick="adicionarTexto('Fortalecimento da saude mental no tratamento do abuso de substancias')">Fortalecimento da saude mental no tratamento do abuso de substancias</div>
-<div class="campo" onclick="adicionarTexto('Reintegracao social e profissional ao mercado de trabalho')">Reintegracao social e profissional ao mercado de trabalho</div>
-<div class="campo" onclick="adicionarTexto('Reducao dos riscos associados ao uso de substancias')">Reducao dos riscos associados ao uso de substancias</div>
-
-<div class="resultado" id="resultado">
-    <h3>Campos elencados:</h3>
-    <p id="textoResultado"></p>
+<div class="banner">
+  <div>
+    <h1>Cuidado Integrado em Saúde Domiciliar para Você e Sua Família</h1>
+    <button onclick="location.href='#contact'">Agende sua avaliação</button>
+  </div>
 </div>
 
-<script>
-    function adicionarTexto(texto) {
-        // Seleciona o elemento onde o texto será exibido
-        var resultado = document.getElementById('textoResultado');
-        
-        // Cria o texto do resultado com a nova escolha
-        if (resultado.innerHTML === '') {
-            resultado.innerHTML = texto;
-        } else {
-            resultado.innerHTML += ', ' + texto;
-        }
-        
-        // Exibe a área de resultado, se ainda não estiver visível
-        document.getElementById('resultado').style.display = 'block';
-    }
-</script>
+<section id="services">
+  <h2>O que fazemos</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Enfermagem</h3>
+      <p>Avaliação inicial, anamnese, acompanhamento e aplicação de questionários para um cuidado personalizado.</p>
+    </div>
+    <div class="card">
+      <h3>Médico</h3>
+      <p>Consulta clínica, prescrição de exames e medicamentos, acompanhamento e suporte para seu bem-estar.</p>
+    </div>
+    <div class="card">
+      <h3>Educador Físico</h3>
+      <p>Planos personalizados de exercícios, Pilates e acompanhamento para ganho de massa e emagrecimento.</p>
+    </div>
+  </div>
+</section>
+
+<section id="plans">
+  <h2>Nossos Planos</h2>
+  <div class="plans">
+    <div class="card">
+      <h3>Plano Essencial</h3>
+      <p>Avaliação de enfermagem, Pilates 1x semana, orientação de exercícios e consulta médica online trimestral.<br><strong>R$ 600/mês</strong></p>
+    </div>
+    <div class="card">
+      <h3>Plano Intermediário</h3>
+      <p>Acompanhamento bimestral, Pilates 2x semana, treinos complementares online e consulta médica bimestral.<br><strong>R$ 900/mês</strong></p>
+    </div>
+    <div class="card">
+      <h3>Plano Premium</h3>
+      <p>Acompanhamento mensal, Pilates e funcional 3x semana, consulta médica mensal e suporte completo.<br><strong>R$ 1.200/mês</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <h2>Nossa Equipe</h2>
+  <div class="team">
+    <div class="card">
+      <h3>Enfermeira</h3>
+      <p>Especialista em avaliação e acompanhamento domiciliar, garantindo cuidados personalizados.</p>
+    </div>
+    <div class="card">
+      <h3>Médico</h3>
+      <p>Responsável pelas avaliações clínicas e prescrição de medicamentos, com atenção especial ao idoso.</p>
+    </div>
+    <div class="card">
+      <h3>Educador Físico</h3>
+      <p>Personal trainer com foco em saúde funcional, Pilates e ganho de massa para todas as idades.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contato</h2>
+  <form action="mailto:seuemail@dominio.com" method="post" enctype="text/plain">
+    <input type="text" name="nome" placeholder="Seu nome" required />
+    <input type="email" name="email" placeholder="Seu email" required />
+    <input type="tel" name="telefone" placeholder="Seu telefone" />
+    <textarea name="mensagem" placeholder="Escreva sua mensagem" rows="5" required></textarea>
+    <button type="submit" class="submit">Enviar</button>
+  </form>
+  <p>Ou fale conosco pelo WhatsApp: <a href="https://wa.me/5519999999999" target="_blank">(19) 99999-9999</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Vital 360 Saúde Domiciliar - Todos os direitos reservados</p>
+</footer>
 
 </body>
 </html>
