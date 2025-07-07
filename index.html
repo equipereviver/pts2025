@@ -4,27 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vital 360 Saúde Domiciliar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --azul: #0a74da;
       --coral: #ff6f61;
-      --cinza-claro: #f9f9f9;
-      --cinza-escuro: #444;
+      --cinza-claro: #f5f7fa;
+      --cinza-escuro: #333;
+      --branco: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
       color: var(--cinza-escuro);
-      background-color: #fff;
+      background-color: var(--branco);
       line-height: 1.6;
     }
 
     header {
       background: var(--azul);
       color: #fff;
-      padding: 20px;
+      padding: 25px 15px;
       text-align: center;
     }
 
@@ -34,14 +41,14 @@
 
     nav a {
       color: #fff;
-      margin: 0 12px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: 500;
-      transition: 0.3s;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: var(--coral);
     }
 
     .banner {
@@ -53,8 +60,8 @@
       align-items: center;
       text-align: center;
       color: #fff;
-      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
       padding: 0 20px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
     }
 
     .banner h1 {
@@ -63,24 +70,24 @@
     }
 
     .banner button {
-      margin-top: 25px;
+      margin-top: 30px;
       padding: 14px 36px;
       font-size: 1.1rem;
       border: none;
-      background: var(--coral);
+      background: linear-gradient(90deg, var(--coral), #ff836b);
       color: #fff;
-      cursor: pointer;
       border-radius: 30px;
-      transition: 0.3s;
+      cursor: pointer;
+      transition: transform 0.3s;
     }
 
     .banner button:hover {
-      background: #e55d51;
+      transform: scale(1.05);
     }
 
     section {
       padding: 60px 20px;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
     }
 
@@ -104,21 +111,29 @@
 
     .card {
       background: #fff;
-      border-radius: 12px;
-      padding: 25px;
-      width: 280px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      transition: 0.3s;
+      border-radius: 16px;
+      padding: 30px 25px;
+      width: 300px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+      text-align: center;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
 
     .card h3 {
       color: var(--azul);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+    }
+
+    .card i {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: var(--coral);
     }
 
     .card p {
@@ -162,8 +177,8 @@
     }
 
     footer {
-      background: #222;
-      color: #ccc;
+      background: #1d1d1d;
+      color: #bbb;
       text-align: center;
       padding: 20px 10px;
       font-size: 0.9rem;
@@ -171,6 +186,7 @@
 
     a {
       color: var(--azul);
+      text-decoration: none;
     }
 
     a:hover {
@@ -209,16 +225,19 @@
   <h2>O que fazemos</h2>
   <div class="services">
     <div class="card">
+      <i class="fas fa-user-nurse"></i>
       <h3>Enfermagem</h3>
-      <p>Avaliação inicial, anamnese, acompanhamento e aplicação de questionários para um cuidado personalizado.</p>
+      <p>Avaliação inicial, anamnese e acompanhamento personalizado com foco em segurança e acolhimento.</p>
     </div>
     <div class="card">
-      <h3>Médico</h3>
-      <p>Consulta clínica, prescrição de exames e medicamentos, acompanhamento e suporte para seu bem-estar.</p>
+      <i class="fas fa-user-md"></i>
+      <h3>Atendimento Médico</h3>
+      <p>Consulta clínica, prescrição de exames e medicamentos, com foco na saúde do idoso e prevenção.</p>
     </div>
     <div class="card">
+      <i class="fas fa-dumbbell"></i>
       <h3>Educador Físico</h3>
-      <p>Planos personalizados de exercícios, Pilates e acompanhamento para ganho de massa e emagrecimento.</p>
+      <p>Exercícios funcionais, Pilates e planos personalizados para ganho de massa e emagrecimento saudável.</p>
     </div>
   </div>
 </section>
@@ -228,15 +247,18 @@
   <div class="plans">
     <div class="card">
       <h3>Plano Essencial</h3>
-      <p>Avaliação de enfermagem, Pilates 1x/semana, orientação de exercícios e consulta médica online trimestral.<br><strong>R$ 600/mês</strong></p>
+      <p>Avaliação de enfermagem, Pilates 1x/semana, orientação de exercícios e consulta médica online trimestral.</p>
+      <strong>R$ 600/mês</strong>
     </div>
     <div class="card">
       <h3>Plano Intermediário</h3>
-      <p>Acompanhamento bimestral, Pilates 2x/semana, treinos complementares online e consulta médica bimestral.<br><strong>R$ 900/mês</strong></p>
+      <p>Acompanhamento bimestral, Pilates 2x/semana, treinos online e consulta médica bimestral.</p>
+      <strong>R$ 900/mês</strong>
     </div>
     <div class="card">
       <h3>Plano Premium</h3>
-      <p>Acompanhamento mensal, Pilates e funcional 3x/semana, consulta médica mensal e suporte completo.<br><strong>R$ 1.200/mês</strong></p>
+      <p>Atendimento mensal, Pilates + funcional 3x/semana, consulta médica mensal e suporte completo.</p>
+      <strong>R$ 1.200/mês</strong>
     </div>
   </div>
 </section>
@@ -245,16 +267,19 @@
   <h2>Nossa Equipe</h2>
   <div class="team">
     <div class="card">
-      <h3>Enfermeira</h3>
-      <p>Especialista em avaliação e acompanhamento domiciliar, garantindo cuidados personalizados.</p>
+      <i class="fas fa-user-nurse"></i>
+      <h3>Enfermeira Responsável</h3>
+      <p>Com experiência em avaliação domiciliar e gestão do cuidado individualizado.</p>
     </div>
     <div class="card">
-      <h3>Médico</h3>
-      <p>Responsável pelas avaliações clínicas e prescrição de medicamentos, com atenção especial ao idoso.</p>
+      <i class="fas fa-user-md"></i>
+      <h3>Médico Clínico</h3>
+      <p>Responsável pelas avaliações e acompanhamento contínuo do estado de saúde.</p>
     </div>
     <div class="card">
+      <i class="fas fa-running"></i>
       <h3>Educador Físico</h3>
-      <p>Personal trainer com foco em saúde funcional, Pilates e ganho de massa para todas as idades.</p>
+      <p>Especializado em atividade física para idosos e reabilitação motora.</p>
     </div>
   </div>
 </section>
@@ -275,7 +300,7 @@
 </section>
 
 <footer>
-  <p>© 2025 Vital 360 Saúde Domiciliar - Todos os direitos reservados</p>
+  <p>© 2025 Vital 360 Saúde Domiciliar – Todos os direitos reservados.</p>
 </footer>
 
 </body>
