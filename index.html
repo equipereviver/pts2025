@@ -1,301 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vital 360 Saúde Domiciliar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    :root {
-      --azul: #0a74da;
-      --coral: #ff6f61;
-      --cinza-claro: #f5f7fa;
-      --cinza-escuro: #333;
-      --branco: #ffffff;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: var(--cinza-escuro);
-      background-color: var(--branco);
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--azul);
-      color: #fff;
-      padding: 25px 15px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--coral);
-    }
-
-    .banner {
-      background: url('https://images.unsplash.com/photo-1554284126-4a9e7e04438f?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-      height: 450px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-      padding: 0 20px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    }
-
-    .banner h1 {
-      font-size: 2.6rem;
-      max-width: 700px;
-      margin-bottom: 20px;
-    }
-
-    .banner button {
-      background: var(--coral);
-      color: #fff;
-      padding: 14px 32px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .banner button:hover {
-      background: #e45a4f;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    section:nth-child(even) {
-      background-color: var(--cinza-claro);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: var(--azul);
-      font-size: 2rem;
-    }
-
-    .services, .plans, .team {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 30px 25px;
-      width: 300px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      transition: all 0.3s;
-      text-align: center;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    .card h3 {
-      color: var(--azul);
-      margin-bottom: 10px;
-      font-size: 1.25rem;
-    }
-
-    .card i {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: var(--coral);
-    }
-
-    .card p {
-      font-size: 0.95rem;
-    }
-
-    form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, textarea {
-      padding: 12px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      transition: border-color 0.2s;
-    }
-
-    input:focus, textarea:focus {
-      border-color: var(--azul);
-      outline: none;
-    }
-
-    button.submit {
-      background: var(--azul);
-      color: #fff;
-      border: none;
-      padding: 14px;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button.submit:hover {
-      background: #085bb5;
-    }
-
-    footer {
-      background: #1d1d1d;
-      color: #bbb;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 0.9rem;
-    }
-
-    a {
-      color: var(--azul);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .card {
-        width: 90%;
-      }
-
-      .banner h1 {
-        font-size: 2rem;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 8px 10px;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Psicólogo Daniel Motta Mariano Gonçalves</title>
+<style>
+  body {font-family: Arial, sans-serif; margin:0; padding:0; color:#333;}
+  header {background:#5c6bc0; color:#fff; padding: 20px; text-align:center;}
+  nav a {color:#fff; margin: 0 15px; text-decoration:none; font-weight:bold;}
+  nav a:hover {text-decoration: underline;}
+  .banner {background: url('https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; height: 400px; display:flex; align-items:center; justify-content:center; color:#fff; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);}
+  .banner h1 {font-size: 2.5rem; max-width: 600px; text-align:center;}
+  .banner button {margin-top: 20px; padding: 12px 30px; font-size: 1.1rem; border:none; background:#ff6f61; color:#fff; cursor:pointer; border-radius: 5px;}
+  section {padding: 40px 20px; max-width: 1000px; margin: auto;}
+  h2 {text-align:center; margin-bottom: 30px; color:#5c6bc0;}
+  .info, .areas {display:flex; flex-wrap: wrap; gap: 20px; justify-content: center;}
+  .card {background:#f5f5f5; border-radius: 10px; padding: 20px; width: 280px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+  .card h3 {color:#5c6bc0; margin-bottom: 15px;}
+  .card p {font-size: 0.95rem;}
+  form {max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 15px;}
+  input, textarea {padding: 10px; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px;}
+  button.submit {background:#5c6bc0; color:#fff; border:none; padding: 12px; font-size: 1rem; cursor:pointer; border-radius: 5px;}
+  footer {background:#222; color:#aaa; text-align:center; padding: 15px 10px; font-size: 0.9rem;}
+</style>
 </head>
 <body>
 
 <header>
-  <h1>Vital 360 Saúde Domiciliar</h1>
+  <h1>Psicólogo Daniel Motta Mariano Gonçalves</h1>
   <nav>
-    <a href="#services">Serviços</a>
-    <a href="#plans">Planos</a>
-    <a href="#team">Equipe</a>
-    <a href="#contact">Contato</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#atuacao">Atuação</a>
+    <a href="#contato">Contato</a>
   </nav>
 </header>
 
 <div class="banner">
-  <h1>Sua saúde em casa, com excelência e acolhimento</h1>
-  <button onclick="location.href='#contact'">Agende sua avaliação</button>
+  <div>
+    <h1>Atendimento psicológico online com base na Psicologia Histórico-Cultural</h1>
+    <button onclick="location.href='#contato'">Agende uma conversa</button>
+  </div>
 </div>
 
-<section id="services">
-  <h2>O que fazemos</h2>
-  <div class="services">
+<section id="sobre">
+  <h2>Sobre o Psicólogo</h2>
+  <div class="info">
     <div class="card">
-      <i class="fas fa-user-nurse"></i>
-      <h3>Enfermagem</h3>
-      <p>Avaliação inicial, anamnese e acompanhamento personalizado com foco em segurança e acolhimento.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-user-md"></i>
-      <h3>Atendimento Médico</h3>
-      <p>Consulta clínica, prescrição de exames e medicamentos, com foco na saúde do idoso e prevenção.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-dumbbell"></i>
-      <h3>Educador Físico</h3>
-      <p>Exercícios funcionais, Pilates e planos personalizados para ganho de massa e emagrecimento saudável.</p>
+      <h3>Daniel Motta Mariano Gonçalves</h3>
+      <p>Psicólogo clínico com experiência em atendimentos individuais, especialmente voltados ao enfrentamento do uso abusivo de substâncias psicoativas.</p>
+      <p>Abordagem: <strong>Psicologia Histórico-Cultural</strong></p>
+      <p>Modalidade de atendimento: <strong>Online</strong></p>
     </div>
   </div>
 </section>
 
-<section id="plans">
-  <h2>Nossos Planos</h2>
-  <div class="plans">
+<section id="atuacao">
+  <h2>Áreas de Atuação</h2>
+  <div class="areas">
     <div class="card">
-      <h3>Plano Essencial</h3>
-      <p>Avaliação de enfermagem, Pilates 1x/semana, orientação de exercícios e consulta médica online trimestral.</p>
-      <strong>R$ 600/mês</strong>
+      <h3>Dependência Química</h3>
+      <p>Acompanhamento psicológico para pessoas em sofrimento devido ao uso problemático de substâncias psicoativas.</p>
     </div>
     <div class="card">
-      <h3>Plano Intermediário</h3>
-      <p>Acompanhamento bimestral, Pilates 2x/semana, treinos online e consulta médica bimestral.</p>
-      <strong>R$ 900/mês</strong>
+      <h3>Saúde Mental</h3>
+      <p>Atendimento voltado para ansiedade, depressão, crises existenciais e outras demandas emocionais.</p>
     </div>
     <div class="card">
-      <h3>Plano Premium</h3>
-      <p>Atendimento mensal, Pilates + funcional 3x/semana, consulta médica mensal e suporte completo.</p>
-      <strong>R$ 1.200/mês</strong>
+      <h3>Acompanhamento Online</h3>
+      <p>Espaço terapêutico seguro, ético e sigiloso pela internet, no conforto da sua casa.</p>
     </div>
   </div>
 </section>
 
-<section id="team">
-  <h2>Nossa Equipe</h2>
-  <div class="team">
-    <div class="card">
-      <i class="fas fa-user-nurse"></i>
-      <h3>Enfermeira Responsável</h3>
-      <p>Com experiência em avaliação domiciliar e gestão do cuidado individualizado.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-user-md"></i>
-      <h3>Médico Clínico</h3>
-      <p>Responsável pelas avaliações e acompanhamento contínuo do estado de saúde.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-running"></i>
-      <h3>Educador Físico</h3>
-      <p>Especializado em atividade física para idosos e reabilitação motora.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contato</h2>
+<section id="contato">
+  <h2>Fale Comigo</h2>
   <form action="mailto:seuemail@dominio.com" method="post" enctype="text/plain">
     <input type="text" name="nome" placeholder="Seu nome" required />
     <input type="email" name="email" placeholder="Seu email" required />
@@ -303,14 +81,13 @@
     <textarea name="mensagem" placeholder="Escreva sua mensagem" rows="5" required></textarea>
     <button type="submit" class="submit">Enviar</button>
   </form>
-  <p style="text-align:center; margin-top: 20px;">
-    Ou fale conosco pelo WhatsApp: 
-    <a href="https://wa.me/5519999999999" target="_blank">(19) 99999-9999</a>
+  <p style="text-align:center; margin-top:20px;">Ou entre em contato diretamente pelo WhatsApp:<br>
+    <a href="https://wa.me/5519982483677" target="_blank">(19) 98248-3677</a>
   </p>
 </section>
 
 <footer>
-  <p>© 2025 Vital 360 Saúde Domiciliar – Todos os direitos reservados.</p>
+  <p>© 2025 Daniel Motta Mariano Gonçalves - Psicologia Clínica Online</p>
 </footer>
 
 </body>
